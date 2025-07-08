@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CAPACITI</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="capaciti logo.jpg" alt="CAPACITI Logo" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+                    <li><a href="impact.html" class="nav-link">Impact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="opportunities.html" class="nav-link dropdown-trigger">
+                            Opportunities
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="opportunities.html#careers" class="nav-dropdown-item" data-section="careers">
+                                <i class="fas fa-briefcase"></i>
+                                Careers
+                            </a>
+                            <a href="opportunities.html#proposals" class="nav-dropdown-item" data-section="proposals">
+                                <i class="fas fa-file-contract"></i>
+                                Proposals
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="blog.html" class="nav-link active">Blogs</a></li>
+                    <li><a href="events.html" class="nav-link">News & Insights</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest from Our Blog</h2>
+                <p class="section-subtitle">Insights, tips, and stories from the world of digital skills development</p>
+            </div>
+
+            <!-- Featured Blog Post -->
+            <div class="featured-blog">
+                <article class="featured-blog-card" data-category="digital-transformation">
+                    <div class="featured-blog-image">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                            alt="Digital Transformation and Technology Networks 2024" itemprop="image">
+                    </div>
+                    <div class="featured-blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> March 20, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 8 min read</span>
+                            <span class="author"><i class="fas fa-user"></i> John Doe</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag primary">Digital Transformation 2024</span>
+                            <span class="blog-tag">Future of Work</span>
+                            <span class="blog-tag">Technology Trends</span>
+                        </div>
+                        <h2>Digital Transformation in 2024: What Every Professional Needs to Know</h2>
+                        <p class="featured-summary">Discover the key digital transformation trends shaping industries in
+                            2024. From AI integration to remote work technologies, learn how professionals can stay
+                            ahead of the curve and leverage emerging technologies for career growth.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more-featured" onclick="openModal('featured-blog-modal')">Read Full
+                                Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Filter and Search -->
+            <div class="blog-controls">
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-category="all">All Posts</button>
+                    <button class="filter-btn" data-category="web-development">Web Development</button>
+                    <button class="filter-btn" data-category="data-science">Data Science</button>
+                    <button class="filter-btn" data-category="digital-transformation">Digital Transformation</button>
+                    <button class="filter-btn" data-category="career">Career Development</button>
+                    <button class="filter-btn" data-category="industry">Industry Insights</button>
+                </div>
+                <div class="blog-search">
+                    <input type="text" placeholder="Search articles..." class="search-input" id="blog-search">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+
+            <!-- Regular Blog Posts Grid -->
+            <div class="blog-grid" id="blog-posts-grid">
+                <article class="blog-card" data-category="web-development" itemscope
+                    itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="React Development Guide 2024" itemprop="image">
+                        <div class="blog-category-tag">Web Development</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-03-15"><i
+                                    class="fas fa-calendar"></i> March 15, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">React</span>
+                            <span class="blog-tag">JavaScript</span>
+                            <span class="blog-tag">Frontend</span>
+                        </div>
+                        <h3 itemprop="headline">Mastering React in 2024: Advanced Patterns and Best Practices</h3>
+                        <p itemprop="description">Explore advanced React patterns, hooks optimization, and performance
+                            techniques that every modern developer should master in 2024.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-1-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 42</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 8</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="career" itemscope itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Tech Career Transition Guide" itemprop="image">
+                        <div class="blog-category-tag">Career</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-03-12"><i
+                                    class="fas fa-calendar"></i> March 12, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 10 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Career Change</span>
+                            <span class="blog-tag">Tech Jobs</span>
+                            <span class="blog-tag">Skills Development</span>
+                        </div>
+                        <h3 itemprop="headline">From Zero to Tech Hero: Complete Career Transition Guide</h3>
+                        <p itemprop="description">A comprehensive roadmap for professionals looking to transition into
+                            tech careers, including skill development strategies and industry insights.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-2-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 67</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="data-science" itemscope
+                    itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="AI and Machine Learning Trends 2024" itemprop="image">
+                        <div class="blog-category-tag">Data Science</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-03-08"><i
+                                    class="fas fa-calendar"></i> March 8, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 12 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Machine Learning</span>
+                            <span class="blog-tag">AI</span>
+                            <span class="blog-tag">Python</span>
+                        </div>
+                        <h3 itemprop="headline">AI & Machine Learning Trends Every Data Scientist Should Watch</h3>
+                        <p itemprop="description">Discover the latest AI and machine learning trends, tools, and
+                            techniques that are reshaping the data science landscape in 2024.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-3-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 89</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 23</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="industry" itemscope itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Remote Work Culture and Productivity" itemprop="image">
+                        <div class="blog-category-tag">Industry Insights</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-03-05"><i
+                                    class="fas fa-calendar"></i> March 5, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Remote Work</span>
+                            <span class="blog-tag">Productivity</span>
+                            <span class="blog-tag">Team Culture</span>
+                        </div>
+                        <h3 itemprop="headline">Building Strong Remote Work Culture in Tech Teams</h3>
+                        <p itemprop="description">Learn how successful tech companies are building inclusive, productive
+                            remote work cultures and maintaining team cohesion in distributed environments.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-4-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 34</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="web-development" itemscope
+                    itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Cybersecurity for Web Developers" itemprop="image">
+                        <div class="blog-category-tag">Web Development</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-03-02"><i
+                                    class="fas fa-calendar"></i> March 2, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 9 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Security</span>
+                            <span class="blog-tag">Web Development</span>
+                            <span class="blog-tag">Best Practices</span>
+                        </div>
+                        <h3 itemprop="headline">Essential Cybersecurity Practices for Modern Web Developers</h3>
+                        <p itemprop="description">A comprehensive guide to implementing security best practices in web
+                            development, from authentication to data protection and secure coding principles.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-5-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 56</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="career" itemscope itemtype="http://schema.org/BlogPosting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Freelancing in Tech Industry" itemprop="image">
+                        <div class="blog-category-tag">Career</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" itemprop="datePublished" content="2024-02-28"><i
+                                    class="fas fa-calendar"></i> February 28, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 11 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Freelancing</span>
+                            <span class="blog-tag">Business</span>
+                            <span class="blog-tag">Tech Industry</span>
+                        </div>
+                        <h3 itemprop="headline">The Complete Guide to Freelancing in Tech: From Setup to Success</h3>
+                        <p itemprop="description">Everything you need to know about starting and growing a successful
+                            freelance tech career, including client acquisition, pricing strategies, and business
+                            management.</p>
+                        <div class="blog-actions">
+                            <a href="#" class="read-more" onclick="openModal('blog-6-modal')">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <div class="engagement-stats">
+                                <span class="likes"><i class="fas fa-heart"></i> 73</span>
+                                <span class="comments"><i class="fas fa-comment"></i> 29</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More / Pagination -->
+            <div class="blog-pagination">
+                <button class="btn btn-outline load-more-btn" onclick="loadMorePosts()">
+                    <i class="fas fa-plus"></i> Load More Articles
+                </button>
+                <div class="pagination-info">
+                    <span>Showing 6 of 24 articles</span>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup for Blog -->
+            <div class="blog-newsletter">
+                <div class="newsletter-content">
+                    <h3>Stay Updated with Our Latest Insights</h3>
+                    <p>Get our newest articles and tech insights delivered directly to your inbox weekly</p>
+                    <form class="blog-newsletter-form" id="blog-newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <small>No spam, unsubscribe anytime. Read our <a href="#">Privacy Policy</a></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Blog Modals with Comments System -->
+    <!-- Featured Blog Modal -->
+    <div id="featured-blog-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('featured-blog-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 20, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 8 min read</span>
+                        <span class="author"><i class="fas fa-user"></i> John Doe</span>
+                    </div>
+                    <div class="blog-tags-full">
+                        <span class="blog-tag primary">Digital Transformation</span>
+                        <span class="blog-tag">Future of Work</span>
+                        <span class="blog-tag">Technology Trends</span>
+                    </div>
+                    <h1>Digital Transformation in 2024: What Every Professional Needs to Know</h1>
+                </div>
+
+                <!-- Featured Article Image -->
+                <div class="blog-featured-image">
+                    <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                        alt="Digital Transformation and Technology Networks 2024" class="article-main-image">
+                </div>
+
+                <div class="blog-content-full">
+                    <p><strong>Digital transformation</strong> continues to reshape industries at an unprecedented pace.
+                        As we progress through 2024, professionals across all sectors must understand and adapt to
+                        emerging technologies and evolving workplace dynamics.</p>
+
+                    <h3>Key Trends Shaping Digital Transformation</h3>
+                    <p>The landscape of digital transformation is being shaped by several critical trends that are
+                        revolutionizing how we work, collaborate, and deliver value to customers.</p>
+
+                    <h4>1. Artificial Intelligence Integration</h4>
+                    <p>AI is no longer a futuristic concept—it's a present reality transforming business operations.
+                        From automated customer service to predictive analytics, AI tools are becoming essential for
+                        competitive advantage.</p>
+
+                    <h4>2. Remote Work Technologies</h4>
+                    <p>The evolution of remote work continues with advanced collaboration tools, virtual reality
+                        meetings, and cloud-based workflows that enable seamless distributed team productivity.</p>
+
+                    <h4>3. Data-Driven Decision Making</h4>
+                    <p>Organizations are leveraging big data and analytics to make informed decisions, optimize
+                        processes, and personalize customer experiences at scale.</p>
+
+                    <div class="blog-quote">
+                        <blockquote>
+                            "The future belongs to organizations that can adapt quickly to technological change while
+                            maintaining a human-centered approach to innovation."
+                        </blockquote>
+                    </div>
+
+                    <h3>Skills for the Digital Future</h3>
+                    <p>To thrive in this digital landscape, professionals need to develop both technical and soft
+                        skills:</p>
+                    <ul>
+                        <li>Digital literacy and technology adaptation</li>
+                        <li>Data analysis and interpretation</li>
+                        <li>Cybersecurity awareness</li>
+                        <li>Creative problem-solving</li>
+                        <li>Cross-functional collaboration</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Additional Blog Modals -->
+    <div id="blog-1-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-1-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>Mastering React in 2024: Advanced Patterns and Best Practices</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 15, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>React continues to evolve with new features and patterns that enhance developer productivity and
+                        application performance. This comprehensive guide covers the most important React concepts every
+                        developer should master in 2024.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="blog-2-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-2-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>From Zero to Tech Hero: Complete Career Transition Guide</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 12, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 10 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>Making a career transition into technology can be both exciting and overwhelming. This
+                        comprehensive guide provides a roadmap for successfully transitioning into a tech career,
+                        regardless of your background.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="blog-3-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-3-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>AI & Machine Learning Trends Every Data Scientist Should Watch</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 8, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 12 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>The field of artificial intelligence and machine learning continues to evolve rapidly. Stay ahead
+                        with these emerging trends and technologies.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="blog-4-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-4-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>Building Strong Remote Work Culture in Tech Teams</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 5, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>Learn strategies for building and maintaining strong team culture in remote and distributed work
+                        environments.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="blog-5-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-5-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>Essential Cybersecurity Practices for Modern Web Developers</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> March 2, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 9 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>Comprehensive guide to implementing security best practices in modern web development projects.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="blog-6-modal" class="modal">
+        <div class="modal-content blog-modal">
+            <span class="close" onclick="closeModal('blog-6-modal')">&times;</span>
+            <article class="blog-full-article">
+                <div class="blog-header">
+                    <h1>The Complete Guide to Freelancing in Tech: From Setup to Success</h1>
+                    <div class="blog-meta-full">
+                        <span class="blog-date"><i class="fas fa-calendar"></i> February 28, 2024</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 11 min read</span>
+                    </div>
+                </div>
+                <div class="blog-content-full">
+                    <p>Everything you need to know about building a successful freelance career in the technology
+                        industry.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="capaciti logo.jpg" alt="CAPACITI Logo" class="footer-logo">
+                    <p>Empowering individuals with digital skills for the future of work.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/capacitiza" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/capacitiza" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programmes.html">Programmes</a></li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="programmes.html#web-dev">Web Development</a></li>
+                        <li><a href="programmes.html#data">Data Science</a></li>
+                        <li><a href="programmes.html#digital">Digital Marketing</a></li>
+                        <li><a href="programmes.html#ux-ui">UX/UI Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest news and events</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CAPACITI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <button id="chatbot-open-btn" class="chatbot-open-btn">💬</button>
+</body>
+</html>

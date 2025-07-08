@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmes - CAPACITI</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="capaciti logo.jpg" alt="CAPACITI Logo" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programmes.html" class="nav-link active">Programmes</a></li>
+                    <li><a href="impact.html" class="nav-link">Impact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="opportunities.html" class="nav-link dropdown-trigger">
+                            Opportunities
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="opportunities.html#careers" class="nav-dropdown-item" data-section="careers">
+                                <i class="fas fa-briefcase"></i>
+                                Careers
+                            </a>
+                            <a href="opportunities.html#proposals" class="nav-dropdown-item" data-section="proposals">
+                                <i class="fas fa-file-contract"></i>
+                                Proposals
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                    <li><a href="events.html" class="nav-link">News & Insights</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for Programmes -->
+    <section class="programmes-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Programmes</h1>
+                <p>Comprehensive training programmes designed for the digital economy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section id="programmes" class="programmes programmes-with-bg">
+        <div class="container">
+            <div class="programme-filters">
+                <button class="filter-btn active" data-filter="all">All Programmes</button>
+                <button class="filter-btn" data-filter="business">AI</button>
+                <button class="filter-btn" data-filter="tech">Web Development</button>
+                <button class="filter-btn" data-filter="manufacturing">Cloud Bases</button>
+                <button class="filter-btn" data-filter="creative">Technical Support</button>
+                <button class="filter-btn" data-filter="biotech">Biotechnology</button>
+            </div>
+
+            <div class="programmes-grid">
+                <div class="programme-card branded-card uvu-accelerate" data-category="business">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Women in Business">
+                        <div class="programme-brand-badge">CAPACITI</div>
+                    </div>
+                    <div class="programme-content">
+                        <div class="programme-meta-new">
+                            <span class="delivery-type hybrid-tag">IN PERSON</span>
+                            <span class="location-type">CAPE TOWN</span>
+                        </div>
+                        <h3>AI Academy</h3>
+                        <p>Artificial Intelligence (AI) is reshaping technology, and women are increasingly contributing to its growth—yet they remain underrepresented in key areas like data science, machine learning, and AI ethics.</p>
+                        <button class="btn-learn-more" onclick="openModal('women-business-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+
+                <div class="programme-card branded-card capaciti" data-category="tech">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Advanced Technical Academy">
+                        <div class="programme-brand-badge">CAPACITI</div>
+                    </div>
+                    <div class="programme-content">
+                        <div class="programme-meta-new">
+                            <span class="delivery-type in-person-tag">IN PERSON</span>
+                            <span class="location-type">JOHANNESBURG</span>
+                        </div>
+                        <h3>Advanced Technical Academy</h3>
+                        <p>Be guided into career and skill-appropriate paths that encompass DevOps, Java, and Data Analytics</p>
+                        <button class="btn-learn-more" onclick="openModal('advanced-tech-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+
+                <div class="programme-card branded-card uvu-bio" data-category="manufacturing">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Good Manufacturing Practices">
+                        <div class="programme-brand-badge">CAPACITI</div>
+                    </div>
+                    <div class="programme-content">
+                        <div class="programme-meta-new">
+                            <span class="delivery-type in-person-tag">IN PERSON</span>
+                            <span class="location-type">CAPE TOWN</span>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                        <p>Join our cohort and gain practical, job-ready experience with platforms like AWS, Azure, and Google Cloud. Empower your future in tech by learning how to architect scalable solutions for the digital age.</p>
+                        <button class="btn-learn-more" onclick="openModal('gmp-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+
+                <div class="programme-card branded-card uvu-accelerate" data-category="creative">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Timbuktoo Creatives Ideation Programme">
+                        <div class="programme-brand-badge">CAPACITI</div>
+                    </div>
+                    <div class="programme-content">
+                        <div class="programme-meta-new">
+                            <span class="delivery-type online-tag">IN PERSON</span>
+                            <span class="location-type">CAPE TOWN</span>
+                        </div>
+                        <h3>IT Support</h3>
+                        <p>The IT Support Cohort equips participants with key skills to troubleshoot hardware, software, and network issues, covering system setup, diagnostics, support, and basic security.</p>
+                        <button class="btn-learn-more" onclick="openModal('creatives-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+
+                <div class="programme-card biotech-card" data-category="biotech">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional man working on biotechnology">
+                        <div class="programme-badge uvu-bio">CAPACITI</div>
+                    </div>
+                    <div class="programme-content biotech-content">
+                        <div class="programme-meta">
+                            <span class="hybrid-tag">IN PERSON</span>
+                            <span class="location-tag">CAPE TOWN</span>
+                        </div>
+                        <h3>"Scaling to Success" IT Demand</h3>
+                        <p>Join our upcoming cohort in Cape Town, South Africa</p>
+                        <button class="btn btn-biotech" onclick="openModal('biotech-scaling-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+
+                <div class="programme-card biotech-card" data-category="biotech">
+                    <div class="programme-image">
+                        <img src="https://images.unsplash.com/photo-1580894908361-967195033215?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional woman in biotechnology field">
+                        <div class="programme-badge uvu-bio">CAPACITI</div>
+                    </div>
+                    <div class="programme-content biotech-content">
+                        <div class="programme-meta">
+                            <span class="hybrid-tag">IN PERSON</span>
+                            <span class="location-tag">CAPE TOWN</span>
+                        </div>
+                        <h3>Clickatell</h3>
+                        <p>Join our cohort</p>
+                        <button class="btn btn-biotech" onclick="openModal('biotech-ideas-modal')">LEARN MORE ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="capaciti logo.jpg" alt="CAPACITI Logo" class="footer-logo">
+                    <p>Empowering individuals with digital skills for the future of work.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/capacitiza" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/capacitiza" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programmes.html">Programmes</a></li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">UX/UI Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest news and events</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CAPACITI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include all the modals from the original index.html -->
+    <div id="advanced-tech-modal" class="modal">
+        <div class="modal-content programme-modal">
+            <span class="close" onclick="closeModal('advanced-tech-modal')">&times;</span>
+            
+            <!-- Header Section -->
+            <div class="programme-modal-header">
+                <h2>Advanced Technical Academy</h2>
+                <p class="programme-description">Be guided into career and skill-appropriate paths that encompass DevOps, Java, and Data Analytics</p>
+                <button class="btn btn-primary apply-btn" onclick="window.open('https://capaciti.breezy.hr/p/d5da8b72543f01-capaciti-advanced-technical-academy/apply', '_blank')">APPLY NOW</button>
+                <p><em>Registration for this programme closes September 2024.</em></p>
+            </div>
+
+            <!-- About the Programme Section -->
+            <div class="programme-section">
+                <h3>About the programme</h3>
+                <p>This Advanced Technical Academy is a year-long programme aimed at equipping young tech professionals with the skills required to succeed in the digital economy. It begins with 6 months of intensive and immersive training in our Braamfontein Accelerator, where candidates are streamed into career-specific tracks such as DevOps, Java, and Data Analytics. Following this, candidates will participate in a 6-month internship with a CAPACITI corporate partner, allowing them to apply the skills they developed during their training.</p>
+                
+                <div class="programme-features">
+                    <h4>Start your learning</h4>
+                    <ul>
+                        <li>DevOps</li>
+                        <li>Java</li>
+                        <li>Data Analytics</li>
+                    </ul>
+                    <p><strong>Programme Start Date:</strong> 01/09/2024</p>
+                </div>
+            </div>
+
+            <!-- Delivery Modality Section -->
+            <div class="programme-section">
+                <h3>Delivery Modality</h3>
+                <div class="modality-content">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Advanced Technical Academy Programme" class="modality-image">
+                    <div class="modality-text">
+                        <p>Campus based experiential learning and training as workplace simulation. Candidates collaborate and complete workplace activities like problem solving, business communication and complete and submit practical assessments, projects and examination of work undertaken. The training element of the course is delivered over a minimum period of 6 months, supported by extensive job and career critical skills training.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requirements Section -->
+            <div class="programme-three-columns">
+                <div class="column">
+                    <h4>Academic and Qualification Requirements</h4>
+                    <ul>
+                        <li>NQF Level 6 or higher qualification in an IT specialised stream</li>
+                        <li>Completed qualifications in Computer Science, Information Technology, Data Analytics, Cyber Security and other tech domain specific qualifications</li>
+                        <li>Be able to provide your certificate of highest academic achievement</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Personal and Eligibility Criteria</h4>
+                    <ul>
+                        <li>Have no criminal record and a clean credit history</li>
+                        <li>South African nationality</li>
+                        <li>Be under or unemployed at the time of application</li>
+                        <li>Able to attend full-time training Monday to Friday</li>
+                        <li>Able to commit to the full 12-month programme and committed to completing it</li>
+                        <li>Be available from September 2024</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Commitment and Availability Conditions</h4>
+                    <ul>
+                        <li>Able to attend full-time training Monday to Friday</li>
+                        <li>Able to commit to the full 12-month programme and committed to completing it</li>
+                        <li>Be available from September 2024</li>
+                        <li>Dedicated, committed, and willingness to learn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Programme Details Section -->
+            <div class="programme-section">
+                <h3>Programme details</h3>
+                
+                <h4>Programme Outcomes</h4>
+                <ul>
+                    <li>Onboarding into the workplace for successful candidates upon meeting all training criteria</li>
+                    <li>Exposure to real-world applications of technologies and understanding of organisational operations across various technical domains</li>
+                    <li>Access to a broad network of field specialists and tech thought leaders</li>
+                    <li>Receipt of certifications relevant to their technical stream for career advancement in the digital economy</li>
+                    <li>Development of core job skills, self-regulation, financial literacy, and one-to-one mentorship from team members</li>
+                </ul>
+
+                <div class="programme-details-grid">
+                    <div class="detail-item">
+                        <h4>Job Critical Skills</h4>
+                        <ul>
+                            <li>Project based</li>
+                            <li>Addresses critical skills gaps</li>
+                            <li>Authentic application</li>
+                            <li>Guided facilitation and learning</li>
+                            <li>Self-aware</li>
+                            <li>Confident Communicators</li>
+                            <li>Goal Focused</li>
+                            <li>Workplace ready</li>
+                        </ul>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Career Critical</h4>
+                        <ul>
+                            <li>Business communications & presentations</li>
+                            <li>Investigation, curiosity & creativity</li>
+                            <li>Continuous learning</li>
+                            <li>Problem solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="programme-section">
+                <h3>From participants of other CAPACITI programmes</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"I am now in a financial position to play a part in my family's well being & participate in the economy."</p>
+                        <p><strong>- Lamla Mtyoki</strong></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The best experience. My time at CAPACITI helped in both my personal and career development."</p>
+                        <p><strong>- Thato Phoku</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="women-business-modal" class="modal">
+        <div class="modal-content programme-modal">
+            <span class="close" onclick="closeModal('women-business-modal')">&times;</span>
+            
+            <!-- Header Section -->
+            <div class="programme-modal-header">
+                <h2>Women in AI</h2>
+                <p class="programme-description">AI Academy is a flagship programme aimed at empowering women to thrive in the rapidly evolving field of Artificial Intelligence. It equips female innovators and professionals with the skills, tools, and confidence to lead and compete in the digital economy.</p>
+                <button class="btn btn-primary apply-btn" onclick="window.open('https://capaciti.breezy.hr/', '_blank')">APPLY NOW</button>
+                <p><em>Registration for this programme is ongoing, register to join our waitlist.</em></p>
+            </div>
+
+            <!-- About the Programme Section -->
+            <div class="programme-section">
+                <h3>About the programme</h3>
+                <p>The programme offers comprehensive assistance to females, enhancing their capabilities and delivering strategic guidance.</p>
+                
+                <div class="programme-features">
+                    <ul>
+                        <li><strong>Experiential Learning</strong> - Hands-on experience with AI tools</li>
+                        <li><strong>Promotes thier growth and development</strong></li>
+                        <li><strong>Tech Tools and Resources</strong> - Introduction to online courses and practical projects</li>
+                        <li><strong>Holistic Approach</strong> - Includes workshops, mentoring, candidate learning</li>
+                        <li><strong>Focus on tech skills and presentation skills </strong></li>
+                        <li><strong>Technology Strategy</strong> - Equips womem</li>
+                        <li><strong>Developing a robust technology strategy</strong></li>
+                    </ul>
+                </div>
+
+                <div class="programme-details-grid">
+                    <div class="detail-item">
+                        <h4>Start your learning</h4>
+                        <ul>
+                            <li>Interactive Informative Events</li>
+                            <li>Mentorship</li>
+                            <li>Online Learning Platform</li>
+                            <li>Prompt,Test and Deploy</li>
+                        </ul>
+                        <p><strong>Programme Start Date:</strong> 28/02/2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery Modality Section -->
+            <div class="programme-section">
+                <h3>Delivery Modality</h3>
+                <div class="modality-content">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Women in Business Programme" class="modality-image">
+                    <div class="modality-text">
+                        <p>The programme will be conducted primarily on site. Active engagement in the programme is mandatory, and all sessions will be conducted in English. Participants must have access to a working station. Additionally, participants are expected to complete surveys, assessments as needed, and online courses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Column Section -->
+            <div class="programme-three-columns">
+                <div class="column">
+             <div class="programme-three-columns">
+    <div class="column">
+        <h4>Recruitment & Selection Criteria</h4>
+        <ul>
+            <li>Must be female</li>
+            <li>Applicants must be between 18 to 35 years old</li>
+            <li>Applicants must have grade 12 and any related IT qualification</li>
+            <li>Be available to attend in-person</li>
+            <li>Be available for 12 months period of the programme/li>
+            <li>If face-to-face workshops are required, successful applicants must be able to travel to one of the specified venues</li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h4>Location</h4>
+        <ul>
+            <li>Salt River (Cape Town)</li>
+            <li>Braamfontein (Johannesburg)</li>
+             <li>Gqeberha</li>
+        </ul>
+    </div>
+</div>
+
+            <!-- Programme Details Section -->
+            <div class="programme-section">
+                <h3>Programme details</h3>
+                <div class="programme-details-grid">
+                    <div class="detail-item">
+                        <h4>Theory Based Workshops</h4>
+                        <p>Hybrid, interactive theory-based workshops covering key entrepreneurial concepts such as Digital Marketing.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Mentorship</h4>
+                        <p>Combination of group coaching sessions as well as one-on-one sessions with a dedicated mentor.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Online Learning Platform</h4>
+                        <p>Access to an online learning platform, with continuous access to personalised resources for knowledge enhancement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="programme-section">
+                <h3>From participants of other UVU Accelerate Programmes</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"I've learnt and unlearnt a lot from the programme. I believe that if I went to market before coming on the course, I would have missed the vision!"</p>
+                        <p><strong>- Yonela Mneno, Founder of Ndiyazazi</strong></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"My biggest takeaway was learning that I needed to focus not just on sales, but my client's perception of my brand"</p>
+                        <p><strong>- Wilma Petersen, Founder of True Kroes</strong></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Everything I have learnt has been valuable in elevating my small business"</p>
+                        <p><strong>- Lucinda Ramsay, Founder of 2020 V</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gmp-modal" class="modal">
+        <div class="modal-content programme-modal">
+            <span class="close" onclick="closeModal('gmp-modal')">&times;</span>
+            
+            <!-- Header Section -->
+            <div class="programme-modal-header">
+                <h2>Good Manufacturing Practices (GMP)</h2>
+                <p class="programme-description">Join our inaugural cohort in Cape Town, South Africa.</p>
+                <button class="btn btn-primary apply-btn" onclick="window.open('https://capaciti.breezy.hr/', '_blank')">APPLY NOW</button>
+                <p><em>Registration for this programme opens in June 2025</em></p>
+            </div>
+
+            <!-- About the Programme Section -->
+            <div class="programme-section">
+                <h3>About the programme</h3>
+                <p>Our one-week Good Manufacturing Practices (GMP) Intensive Training Programme provides a thorough introduction to GMP principles, focusing on manufacturing, quality assurance, and regulatory compliance within the food and pharmaceutical industries. This programme combines theoretical insights with practical, hands-on experiences, ensuring participants gain a deep understanding of GMP standards. Over five days, you'll explore critical aspects such as facility management, process control, cleaning and validation, and preparation for regulatory inspections. By the end of the course, you'll be equipped with the knowledge and skills to ensure compliance, improve product quality, and meet regulatory requirements in the manufacturing environment.</p>
+                
+                <div class="programme-features">
+                    <h4>Start Learning</h4>
+                    <ul>
+                        <li>Understand and implement GMP requirements in food and pharmaceutical settings</li>
+                        <li>Design, manage, and maintain compliant facilities</li>
+                        <li>Apply best practices in cleaning, validation, and process control</li>
+                        <li>Recognise and prepare for regulatory agency inspections</li>
+                        <li>Identify differences between GMP requirements for various product types, including biological and botanical products</li>
+                        <li>Analyse case studies to apply GMP principles in real-world scenarios</li>
+                    </ul>
+                    <p><strong>Programme Start Date:</strong> 29/09/2025</p>
+                </div>
+            </div>
+
+            <!-- Delivery Modality Section -->
+            <div class="programme-section">
+                <h3>Delivery Modality</h3>
+                <div class="modality-content">
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Good Manufacturing Practices Programme" class="modality-image">
+                    <div class="modality-text">
+                        <p>In-person lectures and hands-on laboratory experience. All activities will be conducted in Cape Town, South Africa. Active engagement in the programme is mandatory, and all sessions will be conducted in English.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requirements Section -->
+            <div class="programme-three-columns">
+                <div class="column">
+                    <h4>Academic and Qualification Requirements</h4>
+                    <ul>
+                        <li>Current BSc, BTech chemistry students or biotechnology students with strong knowledge of chemistry</li>
+                        <li>Maximum education level NQF 8</li>
+                        <li>Chemistry and analytical chemistry background</li>
+                        <li>Be able to provide your certificate of highest academic achievement</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Personal & Legal Eligibility Criteria</h4>
+                    <ul>
+                        <li>Have no criminal record and a clean credit history</li>
+                        <li>Rwandan national or permitted to reside in South Africa</li>
+                        <li>Between the age range of 18 to 35 years old</li>
+                        <li>Be under or unemployed at the time of application</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Commitment and Availability Conditions</h4>
+                    <ul>
+                        <li>Being able to attend full-time course in Cape Town– NO relocation costs will be covered</li>
+                        <li>Able to attend full-time training Monday to Friday</li>
+                        <li>Able to commit to the full month of training</li>
+                        <li>Be available to start from September 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Programme Details Section -->
+            <div class="programme-section">
+                <h3>Programme details</h3>
+                
+                <h4>Programme Highlights</h4>
+                <ul>
+                    <li><strong>Interactive Learning:</strong> Real-world scenarios and hands-on exercises</li>
+                    <li><strong>Industry-Specific Insights:</strong> Tailored discussions on both food and pharma GMPs</li>
+                    <li><strong>Specialized Focus Areas:</strong> Dedicated sessions on advanced topics, including biological products and aseptic processing</li>
+                    <li><strong>Certification of Completion:</strong> A certificate awarded upon successful completion of the course, adding to participants' professional credentials</li>
+                </ul>
+
+                <h4>Key Learning Benefits</h4>
+                <ul>
+                    <li><strong>Expert Guidance:</strong> Learn from seasoned instructors with industry experience</li>
+                    <li><strong>Networking Opportunities:</strong> Connect with other professionals in the industry</li>
+                    <li><strong>Practical Applications:</strong> Gain knowledge that is directly applicable to the workplace</li>
+                </ul>
+
+                <h4>Key Objectives</h4>
+                <ul>
+                    <li>Understand and implement GMP requirements in food and pharmaceutical settings</li>
+                    <li>Design, manage, and maintain compliant facilities</li>
+                    <li>Apply best practices in cleaning, validation, and process control</li>
+                    <li>Recognise and prepare for regulatory agency inspections</li>
+                    <li>Identify differences between GMP requirements for various product types, including biological and botanical products</li>
+                    <li>Analyse case studies to apply GMP principles in real-world scenarios</li>
+                </ul>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="programme-section">
+                <h3>Testimonials from other UVU Bio programmes</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"It's an enriching experience. The content is comprehensive, the instructors are knowledgeable, and the interactive approach fosters effective learning."</p>
+                        <p><strong>- Khadija Chapola</strong></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"A great start to a biotechnology career as it allows one to get hands-on experience essential to one's career."</p>
+                        <p><strong>- Abongile Majongolo</strong></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"A highlight of the programme for me was working with the bioreactor and learning practical skills."</p>
+                        <p><strong>- Celestine Joshua</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="programme-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>How and when will a successful candidate be notified?</h4>
+                        <p>The successful candidates will receive notification via email, please ensure you check your spam folder regularly. This communication is anticipated to take place in the new year, ensuring a comprehensive and timely update on the results.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What are the steps during the application process?</h4>
+                        <p>Our application process consists of several stages. First, candidates will be provided with a link to an online test to evaluate their cognitive abilities. Successful candidates will then undergo a phone interview. The final stage involves an in-person interview.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is there a stipend for the programme?</h4>
+                        <p>Yes, all of the interventions offered by UVU Bio are funded and stipends are provided to all candidates. We do not sponsor any relocation costs.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I do this programme online?</h4>
+                        <p>Our programmes are not virtual; they offer a face to face experience at our lab and training facility, aligning closely with the real-world work environment and exposure to laboratory equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="creatives-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('creatives-modal')">&times;</span>
+            <h2>Timbuktoo Creatives Ideation Programme</h2>
+            <p>Unleash your creative potential through innovative ideation and design thinking methodologies. This programme covers:</p>
+            <ul>
+                <li>Creative thinking and ideation techniques</li>
+                <li>Design thinking methodology</li>
+                <li>Innovation frameworks</li>
+                <li>Creative project management</li>
+                <li>Portfolio development</li>
+                <li>Creative entrepreneurship</li>
+            </ul>
+            <div class="modal-stats">
+                <div class="stat">
+                    <strong>Format:</strong> Online
+                </div>
+                <div class="stat">
+                    <strong>Location:</strong> Remote
+                </div>
+                <div class="stat">
+                    <strong>Focus:</strong> Creative Innovation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="biotech-scaling-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('biotech-scaling-modal')">&times;</span>
+            <h2>"Scaling to Success" Biotechnology Incubation & Acceleration Programme</h2>
+            <p>Join our upcoming cohort in Cape Town, South Africa. This programme covers:</p>
+            <ul>
+                <li>Biotechnology innovation and development</li>
+                <li>Business model development</li>
+                <li>Scaling strategies for biotech startups</li>
+                <li>Regulatory compliance in biotechnology</li>
+                <li>Funding and investment strategies</li>
+                <li>Market access and commercialization</li>
+            </ul>
+            <div class="modal-stats">
+                <div class="stat">
+                    <strong>Format:</strong> Hybrid
+                </div>
+                <div class="stat">
+                    <strong>Location:</strong> Cape Town
+                </div>
+                <div class="stat">
+                    <strong>Focus:</strong> Scaling Biotech
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="biotech-ideas-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('biotech-ideas-modal')">&times;</span>
+            <h2>"Ideas to Impact" Biotechnology Incubation & Acceleration Programme</h2>
+            <p>Join our upcoming cohort in Kigali, Rwanda. This programme covers:</p>
+            <ul>
+                <li>Biotechnology fundamentals and applications</li>
+                <li>From concept to prototype development</li>
+                <li>Impact measurement and social innovation</li>
+                <li>Sustainable biotechnology solutions</li>
+                <li>Community engagement and partnerships</li>
+                <li>Technology transfer and implementation</li>
+            </ul>
+            <div class="modal-stats">
+                <div class="stat">
+                    <strong>Format:</strong> Hybrid
+                </div>
+                <div class="stat">
+                    <strong>Location:</strong> Kigali
+                </div>
+                <div class="stat">
+                    <strong>Focus:</strong> Impact Innovation
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- Application Form Styles and Scripts -->
+    <link rel="stylesheet" href="application-form.css">
+    <script src="supabase.config.js"></script>
+    <script src="application-form.js"></script>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <button id="chatbot-open-btn" class="chatbot-open-btn">💬</button>
+</body>
+</html>
